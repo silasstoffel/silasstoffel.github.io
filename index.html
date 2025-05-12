@@ -1,124 +1,90 @@
-<!doctype html>
-<html lang="en">
 
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="description" content="">
-   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-   <meta name="generator" content="Hugo 0.82.0">
-   <title>Sidebars · Bootstrap v5.0</title>
-
-
-   <!-- Bootstrap core CSS -->
-   <link rel="stylesheet" href="./assets/library/bootstrap/css/bootstrap.min.css">
-
-   <style>
-      .bd-placeholder-img {
-         font-size: 1.125rem;
-         text-anchor: middle;
-         -webkit-user-select: none;
-         -moz-user-select: none;
-         user-select: none;
-      }
-
-      @media (min-width: 768px) {
-         .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-         }
-      }
-   </style>
-
-   <link href="./assets/css/sidebars.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silas Stoffel - Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
 </head>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans">
+  <main class="max-w-4xl mx-auto p-6">
+    <!-- Header -->
+    <header class="text-center mb-10">
+      <img src="https://via.placeholder.com/120" alt="Foto de perfil" class="w-28 h-28 mx-auto rounded-full shadow-md mb-4" />
+      <h1 class="text-3xl font-bold">Silas Stoffel</h1>
+      <h2 class="text-lg text-gray-600 dark:text-gray-300">Software Engineer</h2>
+    </header>
 
-<body>
+    <!-- Bio -->
+    <section class="mb-10">
+      <h3 class="text-xl font-semibold mb-2">Sobre mim</h3>
+      <p class="text-gray-700 dark:text-gray-300">
+         Ola, primeiramente obrigado pelo interesse no meu perfil. Sou Silas Stoffel, tenho uma jornada profissional com mais de 10 anos de experiencia, nesse período, já atuei em startups e empresa grande.
+         Indo direto ao ponto, minhas principais soft skills são comunicação (mesmo sendo introvertido) e trabalho em equipe.
+         <br /><br />
+         Sempre estou buscando me atualizar e me capacitar tecnicamente e sendo crítico para aplicar o que realmente ao que faz sentido nos projetos criados e mantidos.
+      </p>
+    </section>
 
-
- 
-      <div class="container">
-         <div class="row">
-            <div class="col-3">
-               <div class="p-3 bg-white">
-                  <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-                     <svg class="bi me-2" width="30" height="24">
-                        <use xlink:href="#bootstrap" />
-                     </svg>
-                     <span class="fs-5 fw-semibold">Silas Stoffel</span>
-                  </a>
-            
-                  <ul class="list-unstyled ps-0">
-                     <li class="mb-1">
-                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                           data-bs-target="#home-collapse" aria-expanded="true">
-                           Home
-                        </button>
-                        <div class="collapse show" id="home-collapse">
-                           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li><a href="#" class="link-dark rounded">Overview</a></li>
-                              <li><a href="#" class="link-dark rounded">Updates</a></li>
-                              <li><a href="#" class="link-dark rounded">Reports</a></li>
-                           </ul>
-                        </div>
-                     </li>
-                     <li class="mb-1">
-                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                           data-bs-target="#dashboard-collapse" aria-expanded="false">
-                           Dashboard
-                        </button>
-                        <div class="collapse" id="dashboard-collapse">
-                           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li><a href="#" class="link-dark rounded">Overview</a></li>
-                              <li><a href="#" class="link-dark rounded">Weekly</a></li>
-                              <li><a href="#" class="link-dark rounded">Monthly</a></li>
-                              <li><a href="#" class="link-dark rounded">Annually</a></li>
-                           </ul>
-                        </div>
-                     </li>
-                     <li class="mb-1">
-                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                           data-bs-target="#orders-collapse" aria-expanded="false">
-                           Orders
-                        </button>
-                        <div class="collapse" id="orders-collapse">
-                           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li><a href="#" class="link-dark rounded">New</a></li>
-                              <li><a href="#" class="link-dark rounded">Processed</a></li>
-                              <li><a href="#" class="link-dark rounded">Shipped</a></li>
-                              <li><a href="#" class="link-dark rounded">Returned</a></li>
-                           </ul>
-                        </div>
-                     </li>
-                     <li class="border-top my-3"></li>
-                     <li class="mb-1">
-                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                           data-bs-target="#account-collapse" aria-expanded="false">
-                           Account
-                        </button>
-                        <div class="collapse" id="account-collapse">
-                           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                              <li><a href="#" class="link-dark rounded">New...</a></li>
-                              <li><a href="#" class="link-dark rounded">Profile</a></li>
-                              <li><a href="#" class="link-dark rounded">Settings</a></li>
-                              <li><a href="#" class="link-dark rounded">Sign out</a></li>
-                           </ul>
-                        </div>
-                     </li>
-                  </ul>
-               </div>
-             </div>
-
-             <div class="col">
-               3 of 3
-             </div>
-         </div>
-
+    <!-- Habilidades -->
+    <section class="mb-10">
+      <h3 class="text-xl font-semibold mb-4">Habilidades Técnicas</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">TypeScript</span>
+        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">React</span>
+        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">Node.js</span>
+        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">AWS</span>
+        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">Docker</span>
+        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">CI/CD</span>
       </div>
+    </section>
 
+    <!-- Experiência -->
+    <section class="mb-10">
+      <h3 class="text-xl font-semibold mb-4">Experiência mais recentes</h3>
+      <div class="mb-6">
+        <h4 class="font-semibold">Engenheiro de Software Sênior – Empresa X</h4>
+        <p class="text-sm text-gray-500 dark:text-gray-400">2021 – Presente</p>
+        <p class="text-gray-700 dark:text-gray-300 mt-1">
+          Liderança técnica em squads de backend e arquitetura de microsserviços, com foco em performance e alta disponibilidade.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold">Desenvolvedor Full Stack – Empresa Y</h4>
+        <p class="text-sm text-gray-500 dark:text-gray-400">2018 – 2021</p>
+        <p class="text-gray-700 dark:text-gray-300 mt-1">
+          Desenvolvimento de aplicações web com React e Node.js, integração com APIs externas e automação de processos internos.
+        </p>
+      </div>
+    </section>
 
+    <!-- Impactos -->
+    <section class="mb-10">
+      <h3 class="text-xl font-semibold mb-4">Impactos do meu trabalho</h3>
+      <ul class="space-y-3 list-disc list-inside text-gray-700 dark:text-gray-300">
+        <li>Redução de 40% no tempo de deploy através da implementação de pipelines CI/CD com GitHub Actions.</li>
+        <li>Arquitetura de sistema de filas que permitiu escalar o processamento de eventos em 10x sem aumento de custo.</li>
+        <li>Reestruturação do banco de dados que melhorou a performance de consultas críticas em até 85%.</li>
+        <li>Mentoria de 5 desenvolvedores que evoluíram para posições plenas/sênior dentro da empresa.</li>
+      </ul>
+    </section>
 
-   <script src="./assets/library/bootstrap/js/bootstrap.bundle.min.js"></script>
-   <script src="./assets/js/sidebars.js"></script>
+    <!-- Contato -->
+    <footer class="text-center border-t border-gray-300 dark:border-gray-700 pt-6">
+      <p class="text-sm text-gray-600 dark:text-gray-400">Conecte-se comigo:</p>
+      <div class="flex justify-center gap-4 mt-2">
+        <a href="https://www.linkedin.com/in/silas-stoffel/" class="text-gray-800 dark:text-gray-200 hover:underline">LinkedIn</a>
+        <a href="https://github.com/silasstoffel" class="text-gray-800 dark:text-gray-200 hover:underline">GitHub</a>
+        <!--<a href="#" class="text-gray-800 dark:text-gray-200 hover:underline">Portfólio</a>-->
+      </div>
+    </footer>
+  </main>
 </body>
-
 </html>
