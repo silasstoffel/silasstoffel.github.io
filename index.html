@@ -6,10 +6,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Silas Stoffel - Senior Software Engineer</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+  <script type="text/javascript">
     tailwind.config = {
       darkMode: 'class',
     }
+
+    const skills = [
+      // langs
+      'Node.js',
+      'PHP',
+      'GoLang',
+      'Javascript',
+      'TypeScript',
+
+      // frameworks
+      'Laravel',
+      'NestJS',
+      'Angular',
+      'Express',
+      'Lumen',
+
+      // databases
+      'PostgreSQL',
+      'MySQL',
+      'SQL Server',
+      'MongoDB',
+      'DynamoDB',
+      'Redis',
+      
+      // IaC
+      'TerraForm',
+      'Pulumi',
+
+      // others
+      'Linux',
+      'AWS Lambda',
+      'SQS',
+      'SNS',
+      'S3',
+      'RDS',
+      'Step Functions',
+      'Event Bridge',
+      'kubernetes',
+    ]
+
+    window.onload = () => {
+      const html = skills.map((s) => {
+        return `<span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">${s}</span>`
+      }).join('')
+
+      document.getElementById('skills').innerHTML = html
+    }
+
   </script>
 </head>
 <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans">
@@ -25,12 +73,15 @@
     <section class="mb-10">
       <h3 class="text-xl font-semibold mb-2">Sobre mim</h3>
       <p class="text-gray-700 dark:text-gray-300">
-         Ola, primeiramente obrigado pelo interesse no meu perfil. Sou Silas Stoffel, tenho uma jornada profissional com mais de 10 anos de experiencia, nesse período, já atuei em startups e empresa grande.
-         Minhas principais soft skills são comunicação (mesmo sendo introvertido) e trabalho em equipe.
-         <br /><br />
-         Mantenho um compromisso pessoal de me atualizar e capacitar tecnicamente e sempre ser crítico para adotar soluções e/ou ferramentas dentro da realidade de cada projeto ou contexto.
+        Profissional com mais de 10 anos de experiência, atuando em diferentes contextos — de startups a grandes empresas. 
+        Mesmo sendo introvertido, desenvolvi uma comunicação clara e objetiva, além de forte colaboração em equipe, que considero minhas principais soft skills.
+        <br /><br />
+        Tenho um compromisso constante com a atualização técnica e busco sempre avaliar criticamente ferramentas e soluções, priorizando aquelas que fazem sentido dentro da realidade e dos objetivos de cada projeto.
+        <br /><br />
+        Ao longo da minha trajetória, adquiri e aprofundei diversas hard skills, que estão detalhadas na seção de habilidades técnicas.
       </p>
     </section>
+
 
     <section class="mb-10">
       <h3 class="text-xl font-semibold mb-4">Impactos mais recentes da minha carreira</h3>
@@ -45,50 +96,35 @@
     <!-- Habilidades -->
     <section class="mb-10">
       <h3 class="text-xl font-semibold mb-4">Habilidades Técnicas</h3>
-      <div class="flex flex-wrap gap-2">
-        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">Node.js</span>
-        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">PHP</span>
-        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">GoLang</span>
-        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">TypeScript</span>
-        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">Angular</span>
-        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
-        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">MySQL</span>
-        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">SQL Server</span>
-        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">AWS</span>
-        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">GCP</span>
-        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">Docker</span>
-        <span class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">CI/CD</span>
-      </div>
+      <div class="flex flex-wrap gap-2" id="skills"></div>
     </section>
 
     <!-- Experiência -->
     <section class="mb-10">
       <h3 class="text-xl font-semibold mb-4">Experiência mais recentes</h3>
       <div class="mb-6">
-        <h4 class="font-semibold">Engenheiro de Software Sênior – Empresa X</h4>
-        <p class="text-sm text-gray-500 dark:text-gray-400">2021 – Presente</p>
+        <h4 class="font-semibold">Senior Software Engineer – Gringo</h4>
+        <p class="text-sm text-gray-500 dark:text-gray-400">05/2024 – Presente</p>
         <p class="text-gray-700 dark:text-gray-300 mt-1">
           Liderança técnica em squads de backend e arquitetura de microsserviços, com foco em performance e alta disponibilidade.
         </p>
       </div>
+
       <div>
-        <h4 class="font-semibold">Desenvolvedor Full Stack – Empresa Y</h4>
+        <h4 class="font-semibold">Senior Software Engineer – Base39</h4>
+        <p class="text-sm text-gray-500 dark:text-gray-400">04/2023 – 05/2023</p>
+        <p class="text-gray-700 dark:text-gray-300 mt-1">
+          Desenvolvimento de aplicações web com React e Node.js, integração com APIs externas e automação de processos internos.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Senior Software Engineer – Loft</h4>
         <p class="text-sm text-gray-500 dark:text-gray-400">2018 – 2021</p>
         <p class="text-gray-700 dark:text-gray-300 mt-1">
           Desenvolvimento de aplicações web com React e Node.js, integração com APIs externas e automação de processos internos.
         </p>
       </div>
-    </section>
-
-    <!-- Impactos -->
-    <section class="mb-10">
-      <h3 class="text-xl font-semibold mb-4">Impactos do meu trabalho</h3>
-      <ul class="space-y-3 list-disc list-inside text-gray-700 dark:text-gray-300">
-        <li>Redução de 40% no tempo de deploy através da implementação de pipelines CI/CD com GitHub Actions.</li>
-        <li>Arquitetura de sistema de filas que permitiu escalar o processamento de eventos em 10x sem aumento de custo.</li>
-        <li>Reestruturação do banco de dados que melhorou a performance de consultas críticas em até 85%.</li>
-        <li>Mentoria de 5 desenvolvedores que evoluíram para posições plenas/sênior dentro da empresa.</li>
-      </ul>
     </section>
 
     <!-- Contato -->
