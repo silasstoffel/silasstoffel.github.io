@@ -16,8 +16,6 @@
       <h2 class="text-lg text-gray-600 dark:text-gray-300">Senior Software Engineer</h2>
     </header>
 
-
-
     <section class="mb-10">
       <h2 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Senior Software Engineer – Gringo</h2>
 
@@ -42,7 +40,18 @@
                 </span>
                 <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Criação das pipelines de CI/CD + Cultura de testes</h3>
                 <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">05/2024</time>
-                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
+                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"><strong>Contexto:</strong><br/>O time já havia iniciado a migração do módulo de pagamentos de um monolito para um microsserviço e bem na minha entrada para o time essa foi minha primeira missão, no caso implementar e/ou melhorar pipelines de CI/CD do microsserviço de pagamentos.</p>
+                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"><strong>Ações:</strong><br/>
+                    - Implementação e configuração via GitActions de um Quality Gate(SonarCloud).<br/>
+                    - Implementação e configuração via GitActions de avaliação de vulnerabilidades.<br/>
+                    - Escrita inicial dos testes unitários dos modulos mais críticos.<br/>
+                    - Implementação das actions de testes ao abrir um pull request.<br/> 
+                    - Execução dos testes na action build do projeto.<br/>
+                    - Apresentação para o time com exemplos para mantermos a cultura de testes.
+                </p>
+                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"><strong>Resultados:</strong><br/>
+                    Os principais resultados atingidos com essas ações foram melhora na dev experience, segurança e qualidade nas entregas e mudanças.
+                </p>
             </li>
 
             <li class="mb-10 ms-6">
@@ -52,8 +61,27 @@
                     </svg>
                 </span>
                 <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Implementação do fallback de pagamentos via cartão</h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 7th, 2021</time>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">06/2024</time>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    <strong>Contexto:</strong><br/>
+                    Inicialmente o checkout da Gringo implementava apenas um Gateway de pagamento (ADYEN) para cartão. Como parte do checkout era executado maneira síncrona, tinhamos problema de instabilidade de APIs e isso gerava uma má experiência para nossos clientes e até perda de vendas. Na época cogitamos contratar CIELO e outros gateways de pagamento, precisávamos ser ágeis para poder plugar adiquirentes além da CIELO. Tendo em mente esse escopo fechamos com um roteador de pagamento (YUNO). Com esse roteador de pagamento era possível com uma única chamada de API implementar qualquer adquirente de cartão e sistemas de antifraud. Outro benefício muito interessante era possível fazer o fallback via no code, apenas plugando caixinhas na pipeline de pagamentos.
+                </p>
+                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"><strong>Ações:</strong><br/>
+                    - Implementação da pre-autorização do pagamento.<br/>
+                    - Implementação da captura do pagamento.<br/>
+                    - Implementação cancelamento e reembolso do pagamento.<br/>
+                    - Implementação do recebimentos de eventos de chargeback.<br/> 
+                    - Implementação de toda parte assincrona para gerenciamento de eventos de webhooks recebidos da YUNO.<br/>
+                    - Implementação de arquitetura orientada a eventos (EDA) para permitir que demais microsserviços possam consumir eventos do payment-service.<br/>
+                    - Atualização de deal nos CRMs baseado no status de pagamento.</br>
+                    - Criação de alertas e monitores de observabilidade da feature.
+                </p>
+                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+                    <strong>Resultados:</strong><br/>
+                    - Redução indisponibilidade de gateway de pagamento para menos de 1%.<br/>
+                    - Time de produto poderia em minutos incluir um novo adquirente de cartão de crédito, criar fallback, definir percentuais de carga por cada adquirente e plugar antifrauds (Cybersource, Clearsale).<br/>
+                    - Chamando apenas uma única API era possível processar qualquer adquirente de cartão desejada pela Gringo.
+                </p>
             </li>
 
             <li class="mb-10 ms-6">
@@ -63,8 +91,26 @@
                     </svg>
                 </span>
                 <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">NuPay</h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2nd, 2021</time>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">10/2024</time>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    <strong>Contexto:</strong><br/>
+                    Diante do aumento de chargebacks e considerando que cerca de 20% dos cartões utilizados no checkout eram do emissor NuBank, identificamos uma oportunidade de mitigar riscos e melhorar a experiência dos clientes. O NuPay, solução de pagamento do próprio NuBank, não possui chargeback, o que o torna uma alternativa mais segura para a Gringo e para os usuários. Assim, decidimos implementar o NuPay como método de pagamento adicional no checkout, visando reduzir perdas financeiras e oferecer mais opções aos clientes.
+                </p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                     <strong>Ações:</strong><br/>
+                     - Desenho da solução, estabelecendo o contrato de APIs com time de aplicativo.<br/>
+                     - Planejamento e definição sobre tokenização de autorização do NuPay pre autorizado.<br/>
+                     - Criação do pagamento por API na NuPay.<br/>
+                     - Criação do estorno do pagamento.<br/>
+                     - Implementação da parte assincrona para receber status de pagamento via webhooks.<br/>
+                     - Criação de alertas/monitores da feature.
+                </p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    <strong>Resultados:</strong><br/>
+                    - 0 chargebacks<br/>
+                    - Recebimento do valor transacionado D+1<br/>
+                    - Melhoria na experiência, não era necessário digitar número do cartão
+                </p>
             </li>
 
             <li class="mb-10 ms-6">
@@ -74,8 +120,22 @@
                     </svg>
                 </span>
                 <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Desafio adicional para pagamentos via cartão sem suporte a 3DS</h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2nd, 2021</time>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">02/2025</time>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    <strong>Contexto:</strong><br/>
+                    Para transações de alto valor em que o emissor do cartão não oferecia suporte a 3DS, implementamos uma camada adicional de segurança para mitigar riscos de chargeback. Integramos o UnicoCheck, solução da Unico, que nos permitiu validar a identidade do portador do cartão por meio de um score de autenticação. Dessa forma, fortalecemos nossas defesas contra fraudes e aumentamos a segurança das vendas.
+                </p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    <strong>Ações:</strong><br/>
+                    - Analise de como podíamos implementar isso no checkout<br/>
+                    - Participei de reunião com outros times(Gringo) que eram donos de alguns microsserviços que a gente precisava personalizar/codificar.<br/>
+                    - Atuei como facilitador ajudando os dois software engineer que estavam atuando comigo na feature.<br/>
+                </p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    <strong>Resultados:</strong><br/>
+                    - Em cenários de solicitação de chargeback tinhamos evidência para facilitar a defesa<br/>
+                    - Aumento na segurança das vendas.
+                </p>                                
             </li>
 
             <li class="mb-10 ms-6">
